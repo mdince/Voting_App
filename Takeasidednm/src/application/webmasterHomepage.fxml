@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="882.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.webmasterHomepageController">
+   <children>
+      <Separator layoutX="438.0" layoutY="26.0" orientation="VERTICAL" prefHeight="434.0" prefWidth="6.0" />
+      <Separator layoutX="661.0" layoutY="26.0" orientation="VERTICAL" prefHeight="434.0" prefWidth="6.0" />
+      <Separator layoutX="226.0" layoutY="26.0" orientation="VERTICAL" prefHeight="434.0" prefWidth="6.0" />
+      <Label layoutX="73.0" layoutY="45.0" text="Add Movie:">
+         <font>
+            <Font name="Century Gothic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="296.0" layoutY="45.0" text="Add Book:">
+         <font>
+            <Font name="Century Gothic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="514.0" layoutY="45.0" text="Add Game:">
+         <font>
+            <Font name="Century Gothic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="732.0" layoutY="45.0" text="Delete User:" textFill="#b92020">
+         <font>
+            <Font name="Century Gothic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="814.0" layoutY="6.0" text="Take A Side." textFill="#ff7700">
+         <font>
+            <Font name="Century Gothic" size="11.0" />
+         </font>
+      </Label>
+      <Separator layoutY="26.0" prefHeight="0.0" prefWidth="882.0" />
+      <TextField fx:id="addBookNameTextField" layoutX="255.0" layoutY="78.0" promptText="name">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="addBookYearTextField" layoutX="255.0" layoutY="116.0" promptText="year">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="addBookGenreTextField" layoutX="255.0" layoutY="156.0" promptText="genre">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="addBookAutorTextField" layoutX="255.0" layoutY="194.0" promptText="autor">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="addBookPageNumberTextField" layoutX="255.0" layoutY="231.0" promptText="page number">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="addBookPublisherTextField" layoutX="255.0" layoutY="270.0" promptText="publisher">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="addGameNameTextField" layoutX="478.0" layoutY="78.0" promptText="name">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="addGameYearTextField" layoutX="478.0" layoutY="116.0" promptText="year">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="addGameGenreTextField" layoutX="478.0" layoutY="156.0" promptText="genre">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="addGameDeveloperTextField" layoutX="478.0" layoutY="194.0" promptText="developer">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="addGameDurationTextField" layoutX="478.0" layoutY="231.0" promptText="duration">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="addGameTypeTextField" layoutX="478.0" layoutY="270.0" promptText="type">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="addMovieNameTextField" layoutX="36.0" layoutY="78.0" promptText="name">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="addMovieYearTextField" layoutX="36.0" layoutY="116.0" promptText="year">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="addMovieGenreTextField" layoutX="36.0" layoutY="156.0" promptText="genre">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="addMovieDirectorTextField" layoutX="36.0" layoutY="194.0" promptText="director">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="addMovieProducerTextField" layoutX="36.0" layoutY="231.0" promptText="producer">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="addMovieActorTextField" layoutX="36.0" layoutY="270.0" promptText="actor">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="addMovieScenaristTextField" layoutX="36.0" layoutY="307.0" promptText="scenarist">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </TextField>
+      <Button fx:id="addMovieSubmitButton" layoutX="87.0" layoutY="368.0" mnemonicParsing="false" onAction="#addMovie" text="Submit" />
+      <Button fx:id="addBookSubmitButton" layoutX="305.0" layoutY="368.0" mnemonicParsing="false" onAction="#addBook" text="Submit" />
+      <Button fx:id="addGameSubmitButton" layoutX="527.0" layoutY="368.0" mnemonicParsing="false" onAction="#addGame" text="Submit" />
+      <TextField fx:id="deleteUserEmailTextField" layoutX="696.0" layoutY="127.0" promptText="email">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </TextField>
+      <Button fx:id="deleteUserDeleteButton" layoutX="745.0" layoutY="181.0" mnemonicParsing="false" onAction="#HandleDelete" text="Delete" textFill="#b92020" />
+   </children>
+</AnchorPane>

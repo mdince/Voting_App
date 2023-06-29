@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="822.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HomepageController">
+   <children>
+      <Label layoutX="739.0" layoutY="6.0" text="Take A Side." textFill="#ff7700">
+         <font>
+            <Font name="Century Gothic" size="13.0" />
+         </font>
+      </Label>
+      <TabPane layoutY="24.0" prefHeight="438.0" prefWidth="822.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Homepage">
+               <content>
+                  <AnchorPane prefHeight="362.0" prefWidth="764.0">
+                     <children>
+                        <ListView fx:id="homepageMoviesListView" layoutX="64.0" layoutY="57.0" prefHeight="294.0" prefWidth="200.0" />
+                        <ListView fx:id="homepageBooksListView" layoutX="311.0" layoutY="57.0" prefHeight="294.0" prefWidth="200.0" />
+                        <ListView fx:id="homepageGamesListView" layoutX="556.0" layoutY="57.0" prefHeight="294.0" prefWidth="200.0" />
+                        <Label layoutX="99.0" layoutY="23.0" text="Top-rated Movies:">
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="590.0" layoutY="23.0" text="Top-rated Games:">
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="350.0" layoutY="23.0" text="Top-rated Books:">
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="Movies">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="moviepageSearchBarTextField" layoutX="592.0" layoutY="24.0" promptText="search movie">
+                           <font>
+                              <Font name="Century Gothic" size="12.0" />
+                           </font>
+                        </TextField>
+                        <Separator layoutX="554.0" layoutY="1.0" orientation="VERTICAL" prefHeight="406.0" prefWidth="0.0" />
+                        <TextField fx:id="moviepageYearTextField" layoutX="48.0" layoutY="70.0" promptText="year">
+                           <font>
+                              <Font name="Century Gothic" size="12.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="moviepageGenreTextField" layoutX="48.0" layoutY="121.0" promptText="genre">
+                           <font>
+                              <Font name="Century Gothic" size="12.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="moviepageDirectorTextField" layoutX="48.0" layoutY="170.0" promptText="director">
+                           <font>
+                              <Font name="Century Gothic" size="12.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="moviepageScenaristTextField" layoutX="48.0" layoutY="221.0" promptText="scenarist">
+                           <font>
+                              <Font name="Century Gothic" size="12.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="moviepageProducerTextField" layoutX="48.0" layoutY="270.0" promptText="producer">
+                           <font>
+                              <Font name="Century Gothic" size="12.0" />
+                           </font>
+                        </TextField>
+                        <ListView fx:id="moviepageMoviesListView" layoutX="284.0" layoutY="53.0" prefHeight="304.0" prefWidth="217.0" />
+                        <Button fx:id="moviepageFilterButton" layoutX="101.0" layoutY="319.0" mnemonicParsing="false" onAction="#handleMovieFilter" text="Filter">
+                           <font>
+                              <Font name="Century Gothic" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="moviepageLikeButton" alignment="CENTER" blendMode="HARD_LIGHT" graphicTextGap="0.0" layoutX="625.0" layoutY="318.0" mnemonicParsing="false" onAction="#handleMovieLike" prefHeight="25.0" prefWidth="30.0" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/like_icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button fx:id="moviepageDislikeButton" blendMode="HARD_LIGHT" graphicTextGap="0.0" layoutX="707.0" layoutY="318.0" mnemonicParsing="false" onAction="#handleMovieDisike" prefHeight="37.0" prefWidth="38.0">
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/dislike_icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Label layoutX="283.0" layoutY="29.0" text="Top-rated movies with given parameters:">
+                           <font>
+                              <Font name="Century Gothic" size="11.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="moviepageDescriptionTextArea" layoutX="592.0" layoutY="70.0" prefHeight="230.0" prefWidth="200.0">
+                           <font>
+                              <Font name="Century Gothic" size="11.0" />
+                           </font></TextArea>
+                        <Button fx:id="moviepageSearchButton" blendMode="HARD_LIGHT" layoutX="754.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleMovieSearch" prefHeight="28.0" prefWidth="32.0">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/searchicon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Books">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="bookpageSearchBarTextField" layoutX="592.0" layoutY="25.0" promptText="search book">
+                           <font>
+                              <Font name="Century Gothic" size="12.0" />
+                           </font>
+                        </TextField>
+                        <Separator layoutX="554.0" layoutY="1.0" orientation="VERTICAL" prefHeight="406.0" prefWidth="0.0" />
+                        <TextField fx:id="bookpageYearTextField" layoutX="48.0" layoutY="70.0" promptText="year">
+                           <font>
+                              <Font name="Century Gothic" size="12.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="bookpageGenreTextField" layoutX="48.0" layoutY="121.0" promptText="genre">
+                           <font>
+                              <Font name="Century Gothic" size="12.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="bookpageAutorTextField" layoutX="48.0" layoutY="170.0" promptText="autor">
+                           <font>
+                              <Font name="Century Gothic" size="12.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="bookpagePageNumberTextField" layoutX="48.0" layoutY="221.0" promptText="page number(max)">
+                           <font>
+                              <Font name="Century Gothic" size="12.0" />
+                           </font>
+                        </TextField>
+                        <ListView fx:id="bookpageBooksListView" layoutX="284.0" layoutY="53.0" prefHeight="304.0" prefWidth="217.0" />
+                        <Button fx:id="bookpageFilterButton" layoutX="101.0" layoutY="319.0" mnemonicParsing="false" onAction="#handleBookFilter" text="Filter">
+                           <font>
+                              <Font name="Century Gothic" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="bookpageLikeButton" blendMode="HARD_LIGHT" layoutX="625.0" layoutY="318.0" mnemonicParsing="false" onAction="#handleBookLike">
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/like_icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button fx:id="bookpageDislikeButton" blendMode="HARD_LIGHT" layoutX="707.0" layoutY="318.0" mnemonicParsing="false" onAction="#handleBookDisike">
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/dislike_icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Label layoutX="286.0" layoutY="29.0" text="Top-rated books with given parameters:">
+                           <font>
+                              <Font name="Century Gothic" size="11.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="bookpageDescriptionTextArea" layoutX="592.0" layoutY="70.0" prefHeight="230.0" prefWidth="200.0">
+                           <font>
+                              <Font size="11.0" />
+                           </font></TextArea>
+                        <Button fx:id="bookpageSearchButton" blendMode="HARD_LIGHT" layoutX="754.0" layoutY="22.0" mnemonicParsing="false" onAction="#handleBookSearch" prefHeight="28.0" prefWidth="32.0">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/searchicon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Games">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="gamepageSearchBarTextField" layoutX="592.0" layoutY="24.0" promptText="search game">
+                           <font>
+                              <Font name="Century Gothic" size="12.0" />
+                           </font>
+                        </TextField>
+                        <Separator layoutX="554.0" layoutY="1.0" orientation="VERTICAL" prefHeight="406.0" prefWidth="0.0" />
+                        <TextField fx:id="gamepageYearTextField" layoutX="48.0" layoutY="70.0" promptText="year">
+                           <font>
+                              <Font name="Century Gothic" size="12.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="gamepageGenreTextField" layoutX="48.0" layoutY="121.0" promptText="genre">
+                           <font>
+                              <Font name="Century Gothic" size="12.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="gamepageDeveloperTextField" layoutX="48.0" layoutY="170.0" promptText="developer">
+                           <font>
+                              <Font name="Century Gothic" size="12.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="gamepageTypeTextField" layoutX="48.0" layoutY="221.0" promptText="type">
+                           <font>
+                              <Font name="Century Gothic" size="12.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="gamepageDurationTextField" layoutX="48.0" layoutY="270.0" promptText="duration">
+                           <font>
+                              <Font name="Century Gothic" size="12.0" />
+                           </font>
+                        </TextField>
+                        <ListView fx:id="gamepageGamesListView" layoutX="284.0" layoutY="53.0" prefHeight="304.0" prefWidth="217.0" />
+                        <Button fx:id="gamepageFilterButton" layoutX="101.0" layoutY="319.0" mnemonicParsing="false" onAction="#handleGameFilter" text="Filter">
+                           <font>
+                              <Font name="Century Gothic" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="gamepageLikeButton" blendMode="HARD_LIGHT" layoutX="625.0" layoutY="318.0" mnemonicParsing="false" onAction="#handleGameLike">
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/like_icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button fx:id="gamepageDislikeButton" blendMode="HARD_LIGHT" layoutX="707.0" layoutY="318.0" mnemonicParsing="false" onAction="#handleGameDisike">
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/dislike_icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Label layoutX="284.0" layoutY="29.0" text="Top-rated games with given parameters:">
+                           <font>
+                              <Font name="Century Gothic" size="11.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="gamepageDescriptionTextArea" layoutX="592.0" layoutY="70.0" prefHeight="230.0" prefWidth="200.0">
+                           <font>
+                              <Font name="Century Gothic" size="11.0" />
+                           </font></TextArea>
+                        <Button fx:id="gamepageSearchButton" blendMode="HARD_LIGHT" layoutX="754.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleGameSearch" prefHeight="30.0" prefWidth="31.0">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/searchicon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Label fx:id="emailLabel" layoutX="14.0" layoutY="5.0">
+         <font>
+            <Font name="Century Gothic" size="11.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
