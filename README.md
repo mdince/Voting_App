@@ -1,5 +1,5 @@
 # Voting_App
-Here is the source code for our little voting application.
+Here is the source code for the little voting application.
 There is also a little video walkthrough.
 Database is uploaded as a script and bacpac file.
 
